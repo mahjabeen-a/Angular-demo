@@ -8,6 +8,8 @@ import { DemoComponent } from './demo/demo.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { RegisterComponent } from './register/register.component';
+import { ExprPipe } from './expr.pipe';
+import { HonorPipe } from './honor.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { RegisterComponent } from './register/register.component';
     DemoComponent,
     LoginComponent,
     EmployeeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ExprPipe,
+    HonorPipe
   ],
   imports: [
     BrowserModule,
