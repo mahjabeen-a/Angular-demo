@@ -8,6 +8,8 @@
         <th>Salary</th>
         <th>DOJ</th>
         <th>Exp</th>
+        <th>Mobile</th>
+        <th>Country</th>
         <th>LoginId</th>
         <th>Password</th>
       </tr>
@@ -18,6 +20,8 @@
         <td>{{employee.salary | currency: 'INR'}}</td>
         <td>{{employee.DOJ | date: 'dd-MM-yyyy hh:mm:ss'}}</td> <!--2 MM is in number, 3 MMM in char-->
         <td>{{employee.DOJ | expr}}</td>
+        <td>{{employee.mobile | code: employee.country}}</td>
+        <td>{{employee.country}}</td>
         <td>{{employee.loginId}}</td>
         <td>{{employee.password}}</td>
       </tr>

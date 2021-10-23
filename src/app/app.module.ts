@@ -10,6 +10,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { RegisterComponent } from './register/register.component';
 import { ExprPipe } from './expr.pipe';
 import { HonorPipe } from './honor.pipe';
+import { CodePipe } from './code.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HonorPipe } from './honor.pipe';
     EmployeeComponent,
     RegisterComponent,
     ExprPipe,
-    HonorPipe
+    HonorPipe,
+    CodePipe
   ],
   imports: [
     BrowserModule,
