@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   loginId: string;
-  passwd: string;
+  password: string;
   employees: any[];
 
   constructor() {
     this.loginId = '';
-    this.passwd = ''; 
+    this.password = ''; 
     this.employees = [ {id: 1, name: "Teresa", gender: 'F', salary: 1000000, DOJ: "01-10-2021", loginId: "teresa", password: "lisbon1"}, 
                       {id: 2, name: "Patrick", gender: 'M', salary: 1500000, DOJ: "02-10-2021", loginId: "patrick", password: "jane2"},
                       {id: 3, name: "Grace", gender: 'F', salary: 600000, DOJ: "03-10-2021", loginId: "grace", password: "pelt3"},
@@ -24,19 +24,19 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   loginSubmit(): void{
-    if (this.loginId === 'HR' && this.passwd === 'HR'){
+    if (this.loginId === 'HR' && this.password === 'HR'){
       alert('Login success!');
     }
     else{
       this.employees.forEach((employee: any) => {
-        if ((this.loginId === employee.loginId) && (this.passwd === employee.password)){
+        if ((this.loginId === employee.loginId) && (this.password === employee.password)){
           alert('Welcome to employee page.');
         }
       });
     }
   }
   loginSubmit2(loginForm: any) {
-    alert('Login form executed....');
+    console.log(loginForm);
   }
 
 }
