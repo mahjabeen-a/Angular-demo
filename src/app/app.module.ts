@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { ExprPipe } from './expr.pipe';
 import { HonorPipe } from './honor.pipe';
 import { CodePipe } from './code.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CodePipe } from './code.pipe';
     RegisterComponent,
     ExprPipe,
     HonorPipe,
-    CodePipe
+    CodePipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
