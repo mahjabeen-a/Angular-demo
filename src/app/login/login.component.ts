@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  loginsubmit(): void{
+  loginSubmit(): void{
     if (this.loginId === 'HR' && this.passwd === 'HR'){
       alert('Login success!');
     }
@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
         }
       });
     }
+  }
+  loginSubmit2(loginForm: any) {
+    alert('Login form executed....');
   }
 
 }
