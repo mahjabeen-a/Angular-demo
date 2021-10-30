@@ -10,10 +10,10 @@
     loginForm = {loginId: 'XXXXX', password: 'XXX'} 
     loginId is used in backend while #loginId is used in html
  -->
- <form #loginForm = "ngForm" (ngSubmit) = "loginSubmit2(loginForm)" novalidate>
+ <form #loginForm = "ngForm" class="form-group col-sm-3" (ngSubmit) = "loginSubmit2(loginForm)" novalidate>
      <fieldset class = "ms-5">
         <h1> Login </h1>
-        <div class="form-group col-sm-3">
+        <div>
             <label for="exampleInputEmail1" class="form-label mt-4">LoginId</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name = "loginId" ngModel #loginId = ngModel required minlength="2" maxlength="10" placeholder="Enter loginId">
             <small id="emailHelp" class="form-text text-muted">
@@ -21,7 +21,7 @@
                 <div *ngIf="loginId.errors?.minlength">Please enter minimum 2 chars in the email</div>
             </small>
         </div>
-        <div class="form-group col-sm-3">
+        <div>
             <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1"  name = "password" ngModel #password = ngModel required minlength="2" maxlength="10" placeholder="Password">
             <small id="passwordHelp" class="form-text text-muted">
