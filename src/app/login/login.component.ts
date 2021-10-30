@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   loginId: string;
+  email: string;
   password: string;
   employees: any[];
 
   constructor() {
+    this.email = '';
     this.loginId = '';
     this.password = ''; 
     this.employees = [ {id: 1, name: "Teresa", gender: 'F', salary: 1000000, DOJ: "01-10-2021", loginId: "teresa", password: "lisbon1"}, 
