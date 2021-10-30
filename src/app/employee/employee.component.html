@@ -1,29 +1,33 @@
-<div>
+<div class=" mx-5 mt-2">
     <h2>Employees Details</h2>
-    <table border="1px">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Salary</th>
-        <th>DOJ</th>
-        <th>Exp</th>
-        <th>Mobile</th>
-        <th>Country</th>
-        <th>LoginId</th>
-        <th>Password</th>
-      </tr>
-      <tr *ngFor="let employee of employees">
-        <td>{{employee.id}}</td>
-        <td>{{employee.name | honor: employee.gender}}</td> <!--pipes, can create own pipes also, passing parameter gender to honor-->
-        <td>{{employee.gender | uppercase}}</td>
-        <td>{{employee.salary | currency: 'INR'}}</td>
-        <td>{{employee.DOJ | date: 'dd-MM-yyyy hh:mm:ss'}}</td> <!--2 MM is in number, 3 MMM in char-->
-        <td>{{employee.DOJ | expr}}</td>
-        <td>{{employee.mobile | code: employee.country}}</td>
-        <td>{{employee.country}}</td>
-        <td>{{employee.loginId}}</td>
-        <td>{{employee.password}}</td>
-      </tr>
+    <table class="table mt-2">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Salary</th>
+          <th>DOJ</th>
+          <th>Exp</th>
+          <th>Mobile</th>
+          <th>Country</th>
+          <th>LoginId</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name | honor: employee.gender}}</td> <!--pipes, can create own pipes also, passing parameter gender to honor-->
+          <td>{{employee.gender | uppercase}}</td>
+          <td>{{employee.salary | currency: 'INR'}}</td>
+          <td>{{employee.DOJ | date: 'dd-MM-yyyy hh:mm:ss'}}</td> <!--2 MM is in number, 3 MMM in char-->
+          <td>{{employee.DOJ | expr}}</td>
+          <td>{{employee.mobile | code: employee.country}}</td>
+          <td>{{employee.country}}</td>
+          <td>{{employee.loginId}}</td>
+          <td>{{employee.password}}</td>
+        </tr>
+      </tbody>
     </table>
-  </div>
+</div>
