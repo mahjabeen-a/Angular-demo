@@ -12,6 +12,7 @@ import { ExprPipe } from './expr.pipe';
 import { HonorPipe } from './honor.pipe';
 import { CodePipe } from './code.pipe';
 import { HeaderComponent } from './header/header.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './header/header.component';
     ExprPipe,
     HonorPipe,
     CodePipe,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
