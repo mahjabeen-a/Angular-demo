@@ -14,11 +14,6 @@ import { CodePipe } from './code.pipe';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 
-const appRoot: Routes = [{path:'', component: LoginComponent},
-                        {path:'login', component: LoginComponent},
-                        {path:'register', component: RegisterComponent}, 
-                        {path:'products', component: ProductComponent}, 
-                        {path:'employees', component: EmployeeComponent}];
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +31,7 @@ const appRoot: Routes = [{path:'', component: LoginComponent},
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoot)
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
