@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthGuard } from '../auth.guard';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   password: string;
   employees: any[];
 
-  constructor() {
+  constructor(private router: Router, private authguard: AuthGuard) {
     this.email = '';
     this.loginId = '';
     this.password = ''; 
@@ -25,20 +26,33 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  loginSubmit(): void{
-    if (this.loginId === 'HR' && this.password === 'HR'){
-      alert('Login success!');
-    }
-    else{
+  loginSubmit(): void {
+    if (this.loginId === 'HR' && this.password === 'HR')
+      alert('Login successful');
+    else {
       this.employees.forEach((employee: any) => {
-        if ((this.loginId === employee.loginId) && (this.password === employee.password)){
-          alert('Welcome to employee page.');
+        if ((this.loginId === employee.loginId) && (this.password === employee.password)) {
+          alert('Welcome to employee page....');
         }
       });
     }
   }
+
   loginSubmit2(loginForm: any) {
     console.log(loginForm);
+    if (loginForm.loginId === 'HR' && loginForm.password === 'HR') {
+      // alert('Login successful');
+      this.router.navigate(['hrpage']);
+      this.authguard.setLoggedIn();
+    }
+    else {
+      this.employees.forEach((employee: any) => {
+        if ((loginForm.loginId === employee.loginId) && (loginForm.password === employee.password)) {
+          alert('Welcome to employee page....');
+          this.authguard.setLoggedIn();
+        }
+      });
+    }
   }
 
 }

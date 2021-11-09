@@ -10,7 +10,7 @@
     loginForm = {loginId: 'XXXXX', password: 'XXX'} 
     loginId is used in backend while #loginId is used in html
  -->
- <form #loginForm = "ngForm" class="form-group col-sm-3" (ngSubmit) = "loginSubmit2(loginForm)" novalidate>
+ <form #loginForm = "ngForm" class="form-group col-sm-3" (ngSubmit) = "loginSubmit2(loginForm.value)" novalidate>
      <fieldset class = "ms-5">
         <h1> Login </h1>
         <div>

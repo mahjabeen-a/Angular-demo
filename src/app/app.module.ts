@@ -13,6 +13,7 @@ import { HonorPipe } from './honor.pipe';
 import { CodePipe } from './code.pipe';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
+import { HrPageComponent } from './hr-page/hr-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductComponent } from './product/product.component';
     HonorPipe,
     CodePipe,
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    HrPageComponent
   ],
   imports: [
     BrowserModule,
