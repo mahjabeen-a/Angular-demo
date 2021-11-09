@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   emp: any;
-  constructor() { 
+  constructor(private service: EmployeeService) { 
     this.emp = {empId: null, empName: '', gender: '', salary: null, doj: null, loginId: '', password: ''};
   }
   submit(): void{
@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.getCountries();
   }
 
 }

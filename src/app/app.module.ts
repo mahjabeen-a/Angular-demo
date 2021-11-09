@@ -14,7 +14,7 @@ import { CodePipe } from './code.pipe';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 import { HrPageComponent } from './hr-page/hr-page.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import { HrPageComponent } from './hr-page/hr-page.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
